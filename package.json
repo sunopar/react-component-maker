@@ -1,11 +1,11 @@
 {
   "name": "react-component-maker",
-  "version": "1.0.1",
+  "version": "1.0.9",
   "description": "build react-component kit",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "preferGlobal": "true",
   "bin": {
-    "mkreact": "./index.js"
+    "mkreact": "./mkreact.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
