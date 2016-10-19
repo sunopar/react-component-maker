@@ -2,11 +2,11 @@
 
 一键式创建React组件
 
-## 使用方法
+## Examples
 
 ```
-//1.下载该repos
-node index.js App
+npm i -g react-component-tool
+mkreact App
 //此时便会创建App组件
 ```
 

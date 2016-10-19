@@ -1,0 +1,33 @@
+{
+  "name": "react-component-maker",
+  "version": "1.0.1",
+  "description": "build react-component kit",
+  "main": "index.js",
+  "preferGlobal": "true",
+  "bin": {
+    "mkreact": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push":"git add . && git commit -m 'page update' && git push -u origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunbrother/react-component-creater.git"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "npm",
+    "javascript"
+  ],
+  "author": "sunOpar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunbrother/react-component-creater/issues"
+  },
+  "homepage": "https://github.com/sunbrother/react-component-creater#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
