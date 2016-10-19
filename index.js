@@ -3,7 +3,7 @@ var createReactComponent = require('./lib/index.js')
 
 var version = require('./package.json').version
 
-var program = require('commander').
+var program = require('commander')
 program
 	.version(version)
 	.command('mkreact [dirNames...]')
