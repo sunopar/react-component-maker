@@ -1,0 +1,6 @@
+{
+	"name": "cc",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./cc.jsx"
+}
