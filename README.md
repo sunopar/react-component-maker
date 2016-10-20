@@ -5,7 +5,7 @@
 ## Examples
 
 ```
-npm i -g react-component-tool
+npm i -g react-component-maker
 mkreact App
 //此时便会创建App组件
 ```
