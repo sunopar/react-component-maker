@@ -1,13 +1,20 @@
-# react-component-tool
+# react-component-maker
 
 一键式创建React组件
 
-## Examples
+## 功能
+
+1. 一键式创建React组件，不是React脚手架！
+2. 支持一次创建多个组件
+
+### Examples
 
 ```
 npm i -g react-component-maker
 mkreact App
 //此时便会创建App组件
+mkreact Header Body Footer
+//此时你就分别创建了Header,Body,Footer三个组件
 ```
 
 ## 组件详情
@@ -24,17 +31,17 @@ mkreact App
 
 ```
 import React from 'react';
-import s from './cc.scss'
-class cc extends React.Component {
+import s from './[name].scss'
+class [name] extends React.Component {
     constructor(props) {
         super(props);
-        this.displayName = cc;
+        this.displayName = [name];
     }
     render() {
-        return <div className={s.container}>cc</div>;
+        return <div className={s.container}>[name]</div>;
     }
 }
-export default cc;
+export default [name];
 ```
 
 ### [name].scss
@@ -49,10 +56,10 @@ export default cc;
 
 ```
 {
-	"[name]": "cc",
+    "name": "[name]",
 	"version": "0.0.0",
 	"private": true,
-	"main": "./cc.jsx"
+	"main": "./[name].jsx"
 }
 ```
 
