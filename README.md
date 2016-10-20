@@ -7,7 +7,7 @@
 1. 一键式创建React组件，不是React脚手架！
 2. 支持一次创建多个组件
 
-### Examples
+### Usage
 
 ```
 npm i -g react-component-maker
