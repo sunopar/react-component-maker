@@ -1,37 +1,54 @@
 # react-component-maker
 
-一键式创建React组件
+the cli to create react components
 
-## 功能
+[中文版](https://github.com/sunbrother/react-component-maker/blob/master/README-zh.md)
 
-1. 一键式创建React组件，不是React脚手架！
-2. 支持一次创建多个组件
+## v1.2.0
+
+support `css`,`scss`,`less`
+
+## support
+
+1. the cli to create react components
+2. support create multiple components
+3. support `css`,`Scss`,`Less`
 
 ### Usage
 
 ```
 npm i -g react-component-maker
 mkreact App
-//此时便会创建App组件
-mkreact Header Body Footer
-//此时你就分别创建了Header,Body,Footer三个组件
+//you will create React component named App
+mkreact Header,Body,Footer
+//you will create React compoennts named Header,Body,Footer
 ```
 
-## 组件详情
+#### create component with Scss
+```
+mkreact -s Body
+//create React components named Body with Scss
+```
+#### create React component with Less
+```
+mkreact -l Body
+//create React components named Body with Less
+```
 
-一个组件为一个文件夹，文件夹目录为
+## component details
+
 
 - [name].jsx
-- [name].scss
+- [name].css
 - package.json
 
-## 文件内容
+## file details
 
 ### [name].jsx
 
 ```
 import React from 'react';
-import s from './[name].scss'
+import s from './[name].css'
 class [name] extends React.Component {
     constructor(props) {
         super(props);
@@ -44,7 +61,7 @@ class [name] extends React.Component {
 export default [name];
 ```
 
-### [name].scss
+### [name].css
 
 ```
 .container {
@@ -63,19 +80,21 @@ export default [name];
 }
 ```
 
-对于`package.json`可能有人不理解。
+I will explain what does `package.json` do.
 
-例如你创建了一个Header组件，它是一个文件夹，名字为Header，文件夹内部有如下目录
+Assume you created a component name 'Header'. And the compoent itself is a folder,
+the folder details like this:
 
 - [name].jsx
-- [name].scss
+- [name].css
 - package.json
 
-那么当你使用
+while you want to import the Header componet, you can do:
 
 ```
 import Header from './Header'
 ```
 
-首先模块系统会定位路径，解析发现Header是一个文件夹，那么它会去找该文件夹下是否有`package.json`文件，如果有，那么接下来会去解析package.json文件，找到它的`main`属性，如果有，并且该属性的路径是正确的，那么就将Header文件定位到该属性所指位置；如果以上为否,就会去找index.js，如果都没有就报错。
-所以通过package.json可以让文件夹在引入时就像一个文件一样。
+The main field is a module ID that is the primary entry point to your program. That is, if your package is named Header, and a user installs it, and then does require("Header"), then your main module's exports object will be returned.
+This should be a module ID relative to the root of your package folder.
+For most modules, it makes the most sense to have a main script and often not much else.
