@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunbrother/react-component-creater.git"
+    "url": "git+https://github.com/sunbrother/react-component-maker.git"
   },
   "keywords": [
     "react",
@@ -24,7 +24,7 @@
   "author": "sunOpar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunbrother/react-component-creater/issues"
+    "url": "https://github.com/sunbrother/react-component-maker/issues"
   },
-  "homepage": "https://github.com/sunbrother/react-component-creater#readme"
+  "homepage": "https://github.com/sunbrother/react-component-maker#readme"
 }
