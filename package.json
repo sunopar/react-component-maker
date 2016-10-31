@@ -1,6 +1,6 @@
 {
   "name": "react-component-maker",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "build react-component kit",
   "main": "./lib/index.js",
   "preferGlobal": "true",
