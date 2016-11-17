@@ -48,14 +48,18 @@ mkreact -l Body
 
 ```
 import React from 'react';
-import s from './[name].css'
+import styles from './[name].css'
 class [name] extends React.Component {
     constructor(props) {
         super(props);
         this.displayName = [name];
     }
     render() {
-        return <div className={s.container}>[name]</div>;
+        return (
+            <div className={styles.container}>
+            [name]
+            </div>
+        )
     }
 }
 export default [name];
