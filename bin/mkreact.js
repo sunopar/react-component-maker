@@ -14,24 +14,30 @@ program
     .version('1.2.0')
     .option('-s --Scss [names]', 'replace css to Scss', parseVal)
     .option('-l --Less [names]', 'replace css to Less', parseVal)
+    .option('-p --pure [names]', 'use pure component',parseVal)
     .parse(process.argv);
-
+var usePureComponent = false
+if(program.pure){
+    usePureComponent = true
+    console.log('you will create pure component for stateless function')
+}
+var name = typeof program.pure !== 'boolean' && program.pure
 if (program.Scss) {
-    console.log(program.Scss);
-    console.log('you will create components ' + program.Scss + ' with Scss');
-    createReactComponent(program.Scss, 'scss');
-    console.log('done!');
+    name = name?name:program.Scss
+    console.log(name);
+    console.log('you will create components ' + name + ' with Scss');
+    createReactComponent(name, 'scss',usePureComponent);
 } else if (program.Less) {
-    console.log(program.Less);
-    console.log('you will create components ' + program.Less + ' with Less');
-    createReactComponent(program.Less, 'less');
-    console.log('done!');
+    name = name?name:program.Less    
+    console.log(name);
+    console.log('you will create components ' + name + ' with Less');
+    createReactComponent(name, 'less',usePureComponent);
 } else {
     var val = process
         .argv[2]
         .split(',');
     console.log(val);
     console.log('you will create components ' + val + ' with css');
-    createReactComponent(val);
-    console.log('done!');
+    createReactComponent(val,'css',usePureComponent);
 }
+console.log('done!');

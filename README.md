@@ -13,7 +13,7 @@ support `css`,`scss`,`less`
 1. the cli to create react components
 2. support create multiple components
 3. support `css`,`Scss`,`Less`
-
+4. support stateless function(or you can say pure component)
 ### Usage
 
 ```
@@ -35,12 +35,18 @@ mkreact -l Body
 //create React components named Body with Less
 ```
 
+#### create React component with Less
+```
+mkreact -p Body
+//you will create pure component for stateless function
+```
+
 ## component details
 
 
 - [name].jsx
 - [name].css
-- package.json
+- index.jsx
 
 ## file details
 
@@ -73,32 +79,10 @@ export default [name];
 }
 ```
 
-### package.json
+### index.jsx
 
 ```
-{
-    "name": "[name]",
-	"version": "0.0.0",
-	"private": true,
-	"main": "./[name].jsx"
-}
+import [name] from './hh'
+
+export default [name]
 ```
-
-I will explain what does `package.json` do.
-
-Assume you created a component name 'Header'. And the compoent itself is a folder,
-the folder details like this:
-
-- [name].jsx
-- [name].css
-- package.json
-
-while you want to import the Header componet, you can do:
-
-```
-import Header from './Header'
-```
-
-The main field is a module ID that is the primary entry point to your program. That is, if your package is named Header, and a user installs it, and then does require("Header"), then your main module's exports object will be returned.
-This should be a module ID relative to the root of your package folder.
-For most modules, it makes the most sense to have a main script and often not much else.
