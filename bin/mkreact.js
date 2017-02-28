@@ -26,18 +26,17 @@ if (program.Scss) {
     name = name?name:program.Scss
     console.log(name);
     console.log('you will create components ' + name + ' with Scss');
-    createReactComponent(name, 'scss',usePureComponent);
 } else if (program.Less) {
     name = name?name:program.Less    
     console.log(name);
     console.log('you will create components ' + name + ' with Less');
-    createReactComponent(name, 'less',usePureComponent);
 } else {
-    var val = process
+    name = process
         .argv[2]
         .split(',');
-    console.log(val);
-    console.log('you will create components ' + val + ' with css');
-    createReactComponent(val,'css',usePureComponent);
+    console.log(name);
+    console.log('you will create components ' + name + ' with css');
 }
+    createReactComponent(name,'css',usePureComponent);
+
 console.log('done!');
